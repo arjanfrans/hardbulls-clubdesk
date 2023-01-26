@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/next-strictest/tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "sourceMap": true,
+    "noEmit": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  }
+}
