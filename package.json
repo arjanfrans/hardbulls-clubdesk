@@ -8,7 +8,7 @@
     "url": "https://arjanfrans.com"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "rm -rf ./dist && NODE_ENV=production webpack",
     "build:dev": "NODE_ENV=development webpack",
     "convert-csv": "csvtojson data/bbl_2023.csv > src/game-table/bbl_2023.json",
     "generate-ics": "ts-node ./generate-calendar.ts"
@@ -26,9 +26,12 @@
     "@tsconfig/next-strictest": "^1.0.1",
     "css-loader": "^6.7.3",
     "csvtojson": "^2.0.10",
+    "html-webpack-plugin": "^5.5.0",
     "ical-generator": "^3.6.1",
+    "image-minimizer-webpack-plugin": "^3.8.1",
     "mini-css-extract-plugin": "^2.7.2",
     "moment": "^2.29.4",
+    "sharp": "^0.31.3",
     "style-loader": "^3.3.1",
     "ts-node": "^10.9.1"
   }

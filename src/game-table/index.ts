@@ -1,40 +1,9 @@
 import csvGamePlan from './bbl_2023.json';
-
-const findTeamLogo = (name: string) => {
-    const mapping = {
-        'hb': ['Hard Bulls'],
-        'di': ['Dornbirn Indians'],
-        'dd': ['Diving Ducks'],
-        'vw': ['Vienna Wanderers'],
-        'bb': ['Blue Bats'],
-        'vm': ['Vienna Metrostars'],
-        'tg': ['Grasshoppers'],
-    };
-
-    for (const [key, values] of Object.entries(mapping)) {
-        if (values.includes(name)) {
-            return `team_logo_${key}.png`;
-        }
-    }
-
-    return;
-}
+import {createMapsLink} from "../create-maps-link";
 
 export const GameTable = () => {
     const table = document.createElement('table');
     const tableBody = table.appendChild(document.createElement('tbody'));
-    const mapsBaseUrl = 'https://www.google.com/maps?q='
-
-    const createMapsLink = (venue: string): HTMLElement => {
-        const link = document.createElement('a')
-
-        link.href = `${mapsBaseUrl}${encodeURIComponent(venue)}`;
-        link.target = '_blank';
-
-        link.textContent = venue;
-
-        return link;
-    }
 
     for (const entry of csvGamePlan.filter(entry => entry['Heim'].trim() !== '')) {
         if (entry['Heim'] !== 'Hard Bulls' && entry['Gast'] !== 'Hard Bulls') {

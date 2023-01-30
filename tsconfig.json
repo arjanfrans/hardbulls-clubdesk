@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/next-strictest/tsconfig.json",
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "es2020",
     "sourceMap": true,
     "noEmit": false,
     "noUnusedLocals": false,

@@ -1,5 +1,9 @@
 import './index.css';
 import {GameTable} from "./game-table";
+import {NextGame} from "./game-table/next-game";
+import moment from "moment";
+
+moment.locale('de-AT');
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement('span');
@@ -113,6 +117,18 @@ const addGameTable = () => {
     }
 }
 
+const addNextGame = () => {
+    const container = document.querySelector('.hardbulls-next-game') as HTMLElement;
+
+    if (container) {
+        const nextGame = NextGame();
+
+        if (nextGame) {
+            container.appendChild(nextGame);
+        }
+    }
+}
+
 export const boot = () => {
     alwaysShowMenuOnDesktop();
     addNameToHeader();
@@ -121,4 +137,5 @@ export const boot = () => {
     moveNewsSubheading();
     newsOverviewAuthorSubheading();
     addGameTable();
+    addNextGame();
 }

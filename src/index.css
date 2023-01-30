@@ -1,3 +1,14 @@
 .hardbulls-game-table table {
     width: 100%;
 }
+
+.hardbulls-flex-row {
+    display: flex;
+    justify-content: center;
+}
+
+.hardbulls-team-logo {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
