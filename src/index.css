@@ -1,3 +1,12 @@
+:root {
+    --light-box-shadow: rgb(0 0 0 / 12%) 0px 0.125rem 0.25rem 0px;
+    --heavy-box-shadow: rgb(0 0 0 / 42%) 0px 0.125rem 0.25rem 0px;
+    --color-bulls-red: rgba(226, 5, 20, 1.0);
+    --color-light-gray: rgba(204, 204, 204, 1.0);
+    --carousel-item-max-height: 150px;
+    --carousel-item-max-width: 150px;
+}
+
 .hardbulls-game-table table {
     width: 100%;
 }
@@ -11,4 +20,174 @@
     max-width: 100px;
     max-height: 100px;
     margin: 10px;
+}
+
+#section_1000049:before {
+    content: "";
+    background-image: url(./assets/baseballer_hit.png?as=webp), url(./assets/baseballer_throw.png?as=webp);
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+div.bulls-banner-logo {
+    text-align: center;
+}
+
+div.bulls-banner-logo img {
+    filter: drop-shadow(0px 3px 0px #000);
+}
+
+h1 {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(0.25turn, var(--color-bulls-red), transparent 50%);
+    border-image-slice: 1;
+}
+
+div.cd-tile-v-detail-area li {
+    padding: 0;
+}
+
+div.cd-tile-v-main-area {
+    padding-bottom: 0;
+}
+
+.bulls-social-links {
+    font-size: 48px;
+    text-align: right;
+}
+
+@media (max-width: 576px) {
+    .bulls-social-links {
+        text-align: center;
+    }
+}
+
+.bulls-social-links a {
+    text-decoration: none;
+}
+
+.bulls-social-links span {
+    color: var(--color-bulls-red);
+}
+
+span.bulls-club-name {
+    color: rgb(131 131 131);
+    margin-left: 20px;
+    font-size: larger;
+}
+
+@media (max-width: 400px) {
+    span.bulls-club-name {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 401px) {
+    span.bulls-club-name {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 401px) {
+    span.bulls-club-name {
+        display: block;
+    }
+}
+
+.cd-button {
+    box-shadow: var(--light-box-shadow);
+}
+
+
+.cd-navigation-bar-container {
+    box-shadow: var(--light-box-shadow);
+}
+
+.cd-navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cd-login-link-desktop {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .cd-navigation-bar-content {
+        width: 100%;
+    }
+
+    .cd-megamenu-button {
+        display: block;
+    }
+}
+
+@media (min-width: 993px) {
+    .cd-megamenu-button {
+        display: none;
+    }
+
+    .cd-megamenu {
+        display: block;
+    }
+}
+
+
+div.cd-tile-v-main-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cd-light .cd-tile-v-box:hover {
+    box-shadow: var(--light-box-shadow);
+    outline: 1px solid var(--color-light-gray);
+}
+
+.cd-button:has(.button-arrow) {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cd-button>.button-arrow {
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid var(--color-bulls-red);
+    border-bottom: 2px solid var(--color-bulls-red);
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 6px;
+    transition: all .3s ease;
+}
+
+.cd-button>.button-arrow::before {
+    display: block;
+    background-color: var(--color-bulls-red);
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+}
+
+.cd-button:hover>.button-arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: text-hover-color;
+}
+
+.cd-button:hover>.button-arrow::before {
+    opacity: 1;
+    width: 8px;
 }

@@ -26,6 +26,7 @@ jobs:
         run: |
           yarn
           yarn build
+          yarn generate-ics
 
       - name: Build output
         uses: actions/upload-artifact@v3

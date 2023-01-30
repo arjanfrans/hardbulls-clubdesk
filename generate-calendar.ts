@@ -1,14 +1,12 @@
 import ical from "ical-generator"
 import { readFileSync } from 'fs';
-import moment from "moment";
+import {parseDate} from "./src/date";
 
 const calendar = ical({name: 'BBL 2023'});
 
 
-const gameTableFile = readFileSync('./src/game-table/bbl_2023.json');
+const gameTableFile = readFileSync('./src/assets/bbl_2023.json');
 const gameTable = JSON.parse(gameTableFile.toString());
-
-const dateFormat = 'DD.MM.YYYY HH:SS';
 
 for (const entry of gameTable) {
     if (entry['Heim'] !== 'Hard Bulls' && entry['Gast'] !== 'Hard Bulls') {
@@ -19,7 +17,7 @@ for (const entry of gameTable) {
         continue;
     }
 
-    const start = moment(`${entry['Datum']} ${entry['Startzeit']}`, dateFormat).toDate();
+    const start = parseDate(`${entry['Datum']} ${entry['Startzeit']}`);
     const end = (new Date());
 
     end.setTime(start.getTime() + (2*60*60*1000));

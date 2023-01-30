@@ -3,6 +3,8 @@
 const env = process.env.NODE_ENV;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserJSPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const useContentHash = false;
@@ -34,6 +36,8 @@ module.exports = {
     optimization: {
         minimize: true,
         minimizer: [
+            new TerserJSPlugin({}),
+            new CssMinimizerPlugin(),
             new ImageMinimizerPlugin({
                 generator: [{
                     preset: "webp",
@@ -43,7 +47,7 @@ module.exports = {
                         resize: {
                             fit: 'contain',
                             enabled: true,
-                            background: { r: 0, g: 0, b: 0, alpha: 0 },
+                            background: {r: 0, g: 0, b: 0, alpha: 0},
                             width: '[width]',
                             height: '[height]'
                         },
@@ -79,9 +83,10 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    plugins: [new MiniCssExtractPlugin({
-        filename: env === 'production' && useContentHash ? '[name].[contenthash].css' : '[name].css'
-    }), new HtmlWebpackPlugin({template: './public/index.html'})],
+    plugins:
+        [new MiniCssExtractPlugin({
+            filename: env === 'production' && useContentHash ? '[name].[contenthash].css' : '[name].css'
+        }), new HtmlWebpackPlugin({template: './public/index.html'})],
     output: {
         filename: env === 'production' && useContentHash ? '[name].[contenthash].js' : '[name].js',
         path: path.resolve(__dirname, 'dist'),

@@ -10,29 +10,54 @@
   "scripts": {
     "build": "rm -rf ./dist && NODE_ENV=production webpack",
     "build:dev": "NODE_ENV=development webpack",
-    "convert-csv": "csvtojson data/bbl_2023.csv > src/game-table/bbl_2023.json",
-    "generate-ics": "ts-node ./generate-calendar.ts"
+    "convert-csv": "csvtojson data/bbl_2023.csv > src/assets/bbl_2023.json",
+    "generate-ics": "ts-node -P ./tsconfig.cli.json ./generate-calendar.ts",
+    "cs-fix": "eslint src --ext ts,tsx",
+    "cs-format": "prettier 'src/**/*.ts' --write --no-semi --tab-width 4 --print-width=120",
+    "cs": "yarn cs-format && yarn cs-fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "root": true,
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": [
+        "error",
+        {
+          "ts-ignore": "allow-with-description"
+        }
+      ]
+    }
   },
   "main": "index.js",
   "repository": "git@github.com:arjanfrans/hardbulls-clubdesk.git",
   "license": "MIT",
-  "dependencies": {
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@tsconfig/next-strictest": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
     "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "csvtojson": "^2.0.10",
+    "eslint": "^8.33.0",
     "html-webpack-plugin": "^5.5.0",
     "ical-generator": "^3.6.1",
     "image-minimizer-webpack-plugin": "^3.8.1",
     "mini-css-extract-plugin": "^2.7.2",
-    "moment": "^2.29.4",
+    "prettier": "^2.8.3",
     "sharp": "^0.31.3",
     "style-loader": "^3.3.1",
-    "ts-node": "^10.9.1"
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
