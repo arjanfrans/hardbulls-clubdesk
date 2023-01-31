@@ -14,3 +14,5 @@ export const parseDate = (date: string) => {
 
     throw new Error(`Error parsing date ${date}.`)
 }
+
+export const dateFormatter = new Intl.DateTimeFormat("de-AT", { dateStyle: "full", timeStyle: "short" })

@@ -1,5 +1,5 @@
 import "./index.css"
-import { GameTable } from "./game-table"
+import { CardGameTable, SimpleGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 
 const addNameToHeader = () => {
@@ -103,10 +103,10 @@ const newsOverviewAuthorSubheading = () => {
 }
 
 const addGameTable = () => {
-    const gameTableContainer = document.querySelector(".hardbulls-game-table") as HTMLElement
+    const gameTableContainer = document.querySelector(".hardbulls-card-game-table") as HTMLElement
 
     if (gameTableContainer) {
-        const gameTableElement = GameTable()
+        const gameTableElement = CardGameTable()
 
         gameTableContainer.appendChild(gameTableElement)
     }

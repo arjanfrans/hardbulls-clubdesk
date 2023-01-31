@@ -1,7 +1,7 @@
 import csvGamePlan from "./assets/bbl_2023.json"
 import { parseDate } from "./date"
 
-interface CsvEntry {
+export interface CsvEntry {
     Heim: string
     Gast: string
     Startzeit: string
@@ -18,6 +18,9 @@ export const getGamesForTeam = (team: string): CsvEntry[] => {
 
 export const getUpcomingGamesForTeam = (team: string): CsvEntry[] => {
     const now = new Date()
+
+    now.setHours(0)
+    now.setMinutes(0)
 
     return getGamesForTeam(team).filter((entry: CsvEntry) => {
         const startDate = parseDate(`${entry["Datum"]} ${entry["Startzeit"]}`)

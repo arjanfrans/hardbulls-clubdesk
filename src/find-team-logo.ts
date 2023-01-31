@@ -39,7 +39,7 @@ export const findTeamLogo = (name: string) => {
     }
 
     for (const [key, values] of Object.entries(mapping)) {
-        if (values.includes(name) && logoMapping[key]) {
+        if (values.some((value) => name.toLowerCase().includes(value.toLowerCase())) && logoMapping[key]) {
             return logoMapping[key]
         }
     }
