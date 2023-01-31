@@ -35,15 +35,20 @@ export const CardGameTable = () => {
     for (const columnData of rowData) {
         const row = createElement({ tag: "div", classList: ["cd-row"] })
 
-        for (const blockData of columnData) {
+        for (const entry of columnData) {
             const column = createElement({ tag: "div", classList: ["cd-col", "m4"] })
             const block = createElement({
                 tag: "div",
-                classList: ["cd-block", "cd-block-center", "hardbulls-game-card"],
+                classList: [
+                    "cd-block",
+                    "cd-block-center",
+                    "hardbulls-game-card",
+                    entry["Gast"] === "Hard Bulls" ? "hardbulls-game-card-away" : "",
+                ],
             })
             const content = createElement({ tag: "div", classList: ["cd-block-content"] })
 
-            content.appendChild(createGameCard(blockData))
+            content.appendChild(createGameCard(entry))
 
             block.appendChild(content)
             column.appendChild(block)

@@ -4,6 +4,7 @@
     --card-box-shadow: rgb(0 0 0 / 10%) 0px 0.08rem 0.1rem 0px;
     --color-bulls-red: rgba(226, 5, 20, 1.0);
     --color-light-gray: rgba(204, 204, 204, 1.0);
+    --color-very-light-gray: rgb(243, 243, 243);
     --carousel-item-max-height: 150px;
     --carousel-item-max-width: 150px;
 }
@@ -12,6 +13,10 @@
     box-shadow: var(--card-box-shadow);
     padding-bottom: 15px;
     margin: 15px;
+}
+
+.hardbulls-game-card-away {
+    background-color: var(--color-very-light-gray);
 }
 
 .hardbulls-game-table table {
