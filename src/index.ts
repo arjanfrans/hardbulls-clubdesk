@@ -1,6 +1,9 @@
 import "./index.css"
-import { CardGameTable, SimpleGameTable } from "./game-table/simple-game-table"
+import "./modal.css"
+import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
+import { createModal } from "./create-modal"
+import { createElement } from "./util/html"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -124,6 +127,18 @@ const addNextGame = () => {
     }
 }
 
+const addPlayerStatistics = () => {
+    const container = document.querySelector(".hardbulls-player-statistics") as HTMLElement
+
+    if (container) {
+        const modal = createModal("hardbulls-statistics-modal")
+
+        container.appendChild(modal.container)
+
+        modal.content.appendChild(createElement({ tag: "div", text: "Test text" }))
+    }
+}
+
 export const boot = () => {
     alwaysShowMenuOnDesktop()
     addNameToHeader()
@@ -133,4 +148,5 @@ export const boot = () => {
     newsOverviewAuthorSubheading()
     addGameTable()
     addNextGame()
+    addPlayerStatistics()
 }

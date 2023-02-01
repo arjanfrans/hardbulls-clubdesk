@@ -11,6 +11,7 @@
     "build": "rm -rf ./dist && NODE_ENV=production webpack",
     "build:dev": "NODE_ENV=development webpack",
     "convert-csv": "csvtojson data/bbl_2023.csv > src/assets/bbl_2023.json",
+    "convert-stats-csv": "ts-node -P ./tsconfig.cli.json ./generate-stats.ts",
     "generate-ics": "ts-node -P ./tsconfig.cli.json ./generate-calendar.ts",
     "cs-fix": "eslint src --ext ts,tsx",
     "cs-format": "prettier 'src/**/*.ts' --write --no-semi --tab-width 4 --print-width=120",

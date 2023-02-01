@@ -1,8 +1,8 @@
 import { createMapsLink } from "../create-maps-link"
 import { CsvEntry, getGamesForTeam } from "../game-plan"
-import { createElement } from "../html/utils"
+import { createElement } from "../util/html"
 import { createGameCard } from "./game-card"
-import { chunks } from "../array/util"
+import { chunks } from "../util/array"
 
 export const SimpleGameTable = () => {
     const table = createElement({ tag: "table" })

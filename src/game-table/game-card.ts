@@ -2,7 +2,7 @@ import type { CsvEntry } from "../game-plan"
 import { dateFormatter, parseDate } from "../date"
 import { findTeamLogo } from "../find-team-logo"
 import { createMapsLink } from "../create-maps-link"
-import { createElement } from "../html/utils"
+import { createElement } from "../util/html"
 
 export const createGameCard = (entry: CsvEntry) => {
     const nextGameContainer = document.createElement("div") as HTMLElement
