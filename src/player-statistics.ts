@@ -108,63 +108,61 @@ export const PlayerStatistics = (name: string) => {
         classList: ["hardbulls-player-statistics-table"],
     })
 
-    if (!Object.keys(statsJson).includes(name)) {
-        return
-    }
-
     const playerStats = stats[name]
 
-    if (!playerStats) {
-        return
-    }
-
-    for (const [year, { batting, pitching }] of Object.entries(playerStats)) {
-        const yearColumn = createElement({
-            tag: "td",
-            children: [createElement({ tag: "strong", text: year })],
-        })
-
-        if (pitching) {
-            const pitchingRow = createElement({
-                tag: "tr",
-                children: [yearColumn],
+    if (playerStats) {
+        for (const [year, { batting, pitching }] of Object.entries(playerStats)) {
+            const pitchingYearColumn = createElement({
+                tag: "td",
+                children: [createElement({ tag: "strong", text: year })],
             })
-            for (const pitchingProperty of PitchingProperties) {
-                const column = createElement({ tag: "td" })
-                const value = pitching[pitchingProperty]
-
-                if (value) {
-                    column.textContent = value
-                } else {
-                    column.textContent = "0"
-                }
-
-                pitchingRow.appendChild(column)
-            }
-
-            pitchingTableBody.appendChild(pitchingRow)
-        }
-
-        if (batting) {
-            const battingRow = createElement({
-                tag: "tr",
-                children: [yearColumn],
+            const battingYearColumn = createElement({
+                tag: "td",
+                children: [createElement({ tag: "strong", text: year })],
             })
 
-            for (const battingProperty of BattingProperties) {
-                const column = createElement({ tag: "td" })
-                const value = batting[battingProperty]
+            if (pitching) {
+                const pitchingRow = createElement({
+                    tag: "tr",
+                    children: [pitchingYearColumn],
+                })
+                for (const pitchingProperty of PitchingProperties) {
+                    const column = createElement({ tag: "td" })
+                    const value = pitching[pitchingProperty]
 
-                if (value) {
-                    column.textContent = value
-                } else {
-                    column.textContent = "0"
+                    if (value) {
+                        column.textContent = value
+                    } else {
+                        column.textContent = "0"
+                    }
+
+                    pitchingRow.appendChild(column)
                 }
 
-                battingRow.appendChild(column)
+                pitchingTableBody.appendChild(pitchingRow)
             }
 
-            battingTableBody.appendChild(battingRow)
+            if (batting) {
+                const battingRow = createElement({
+                    tag: "tr",
+                    children: [battingYearColumn],
+                })
+
+                for (const battingProperty of BattingProperties) {
+                    const column = createElement({ tag: "td" })
+                    const value = batting[battingProperty]
+
+                    if (value) {
+                        column.textContent = value
+                    } else {
+                        column.textContent = "0"
+                    }
+
+                    battingRow.appendChild(column)
+                }
+
+                battingTableBody.appendChild(battingRow)
+            }
         }
     }
 
