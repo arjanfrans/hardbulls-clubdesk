@@ -6,11 +6,9 @@ export interface Modal {
     closeButton: HTMLElement
 
     background: HTMLElement
-
-    openTrigger: HTMLElement
 }
 
-export const createModal = (id: string) => {
+export const createModal = (id: string, onOpen: (modal: Modal, openTrigger: HTMLElement) => void): Modal => {
     const closeButton = createElement({
         tag: "button",
         classList: ["hardbulls-modal-close-button", "hardbulls-modal-close"],
@@ -20,24 +18,38 @@ export const createModal = (id: string) => {
     const content = createElement({
         tag: "div",
         classList: ["hardbulls-modal-content"],
-        children: [closeButton],
     })
+    const contentContainer = createElement({
+        tag: "div",
+        classList: ["hardbulls-modal-content-container"],
+        children: [closeButton, content],
+    })
+
     const background = createElement({ tag: "div", classList: ["hardbulls-modal-close", "hardbulls-modal-background"] })
 
     const container = createElement({
         id,
         tag: "div",
         classList: ["hardbulls-modal-container"],
-        children: [background, content],
+        children: [background, contentContainer],
     })
 
-    const openTrigger = document.querySelector(`[data-modal=${id}]`)
+    const openTriggers = document.querySelectorAll(`[data-modal=${id}]`)
 
-    if (openTrigger) {
+    const modal = {
+        container,
+        content,
+        background,
+        closeButton,
+    }
+
+    for (const openTrigger of openTriggers) {
         openTrigger.addEventListener("click", function (event) {
             event.preventDefault()
 
             container.classList.add("hardbulls-modal-open")
+
+            onOpen(modal, openTrigger as HTMLElement)
 
             for (const exitTrigger of [closeButton, background]) {
                 exitTrigger.addEventListener("click", function (event) {
@@ -48,10 +60,5 @@ export const createModal = (id: string) => {
         })
     }
 
-    return {
-        container,
-        content,
-        background,
-        closeButton,
-    }
+    return modal
 }

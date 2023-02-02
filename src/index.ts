@@ -1,9 +1,11 @@
 import "./index.css"
 import "./modal.css"
+import "./statistics.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 import { createModal } from "./create-modal"
 import { createElement } from "./util/html"
+import { PlayerStatistics } from "./player-statistics"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -131,7 +133,21 @@ const addPlayerStatistics = () => {
     const container = document.querySelector(".hardbulls-player-statistics") as HTMLElement
 
     if (container) {
-        const modal = createModal("hardbulls-statistics-modal")
+        const modal = createModal("hardbulls-statistics-modal", (modal, openTrigger) => {
+            const playerName = openTrigger.getAttribute("data-player")
+
+            if (!playerName) {
+                return
+            }
+
+            const playerStatsTable = PlayerStatistics(playerName)
+
+            if (!playerStatsTable) {
+                return
+            }
+
+            modal.content.replaceChildren(playerStatsTable)
+        })
 
         container.appendChild(modal.container)
 

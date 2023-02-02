@@ -24,12 +24,17 @@
     width: 100%;
     height: 100%;
 }
-.hardbulls-modal-content {
+.hardbulls-modal-content-container {
     background: #fff;
     position: relative;
     width: 80%;
     height: 80%;
     padding: 30px;
+}
+
+.hardbulls-modal-content {
+    height: 100%;
+    overflow-x: scroll;
 }
 
 .hardbulls-modal-close-button {
