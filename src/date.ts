@@ -6,7 +6,7 @@ export const parseDate = (date: string) => {
         throw new Error(`Invalid date format ${date}.`)
     }
 
-    const [, month, day, year, hour, minute] = parsedDate.map((v) => Number.parseInt(v)) as Array<number>
+    const [, day, month, year, hour, minute] = parsedDate.map((v) => Number.parseInt(v)) as Array<number>
 
     if (month && day && year) {
         return new Date(year, month - 1, day, hour, minute)
