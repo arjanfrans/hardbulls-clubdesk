@@ -3,6 +3,7 @@
     --heavy-box-shadow: rgb(0 0 0 / 42%) 0px 0.125rem 0.25rem 0px;
     --card-box-shadow: rgb(0 0 0 / 10%) 0px 0.08rem 0.1rem 0px;
     --color-bulls-red: rgba(226, 5, 20, 1.0);
+    --color-bulls-light-red: rgba(226, 5, 20, 0.3);
     --color-light-gray: rgba(204, 204, 204, 1.0);
     --color-very-light-gray: rgb(243, 243, 243);
     --carousel-item-max-height: 150px;

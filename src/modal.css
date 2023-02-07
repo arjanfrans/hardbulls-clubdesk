@@ -39,7 +39,7 @@ a[data-modal="hardbulls-statistics-modal"] {
 
 .hardbulls-modal-content {
     height: 100%;
-    overflow-x: scroll;
+    overflow: auto;
 }
 
 .hardbulls-modal-close-button {

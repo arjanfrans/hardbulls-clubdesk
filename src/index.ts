@@ -1,6 +1,6 @@
 import "./index.css"
 import "./modal.css"
-import "./statistics.css"
+import "./table.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 import { createModal } from "./create-modal"
@@ -155,7 +155,7 @@ const addPlayerStatistics = () => {
     }
 }
 
-export const boot = () => {
+export const theBulls = () => {
     alwaysShowMenuOnDesktop()
     addNameToHeader()
     shuffleSponsors()

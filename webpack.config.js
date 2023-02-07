@@ -90,7 +90,7 @@ module.exports = {
     output: {
         filename: env === 'production' && useContentHash ? '[name].[contenthash].js' : '[name].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'Clubdesk',
+        library: 'GodSave',
         clean: true,
     },
 };
