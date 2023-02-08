@@ -4,9 +4,6 @@ import "./table.css"
 import "./player-card.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
-import { createModal } from "./create-modal"
-import { createElement } from "./util/html"
-import { PlayerStatistics } from "./player-statistics"
 import { PlayerCardsContainer } from "./player-card"
 
 const addNameToHeader = () => {
@@ -131,32 +128,6 @@ const addNextGame = () => {
     }
 }
 
-const addPlayerStatistics = () => {
-    const container = document.querySelector(".hardbulls-player-statistics") as HTMLElement
-
-    if (container) {
-        const modal = createModal("hardbulls-statistics-modal", (modal, openTrigger) => {
-            const playerName = openTrigger.getAttribute("data-player")
-
-            if (!playerName) {
-                return
-            }
-
-            const playerStatsTable = PlayerStatistics(playerName)
-
-            if (!playerStatsTable) {
-                return
-            }
-
-            modal.content.replaceChildren(playerStatsTable)
-        })
-
-        container.appendChild(modal.container)
-
-        modal.content.appendChild(createElement({ tag: "div", text: "Test text" }))
-    }
-}
-
 const addPlayerCardPage = () => {
     const container = document.querySelector(".hardbulls-player-container") as HTMLElement
 
@@ -178,6 +149,5 @@ export const theBulls = () => {
     newsOverviewAuthorSubheading()
     addGameTable()
     addNextGame()
-    addPlayerStatistics()
     addPlayerCardPage()
 }

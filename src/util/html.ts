@@ -1,7 +1,7 @@
 interface ElementOptions {
     tag?: string
     classList?: string[]
-    children?: HTMLElement[] | undefined
+    children?: Array<HTMLElement | undefined> | undefined
     text?: string | undefined
     id?: string
     title?: string | undefined
@@ -63,7 +63,9 @@ export const createElement = ({
     }
 
     for (const child of children) {
-        element.appendChild(child)
+        if (child) {
+            element.appendChild(child)
+        }
     }
 
     if (text) {

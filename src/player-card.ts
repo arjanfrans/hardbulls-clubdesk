@@ -121,26 +121,32 @@ const playerCard = (name: string, modal: InlineModal) => {
                     }),
                     createElement({
                         tag: "div",
-                        children: [createElement({ tag: "p", text: data.positions.join(" / ") })],
-                    }),
-                    createElement({
-                        tag: "div",
                         children: [
-                            (() => {
-                                const statsLink = createElement({ tag: "a", text: "Statistik" })
-
-                                statsLink.setAttribute("data-modal", "hardbulls-statistics-modal")
-                                statsLink.setAttribute("data-player", name)
-
-                                statsLink.onmousedown = (event) => {
-                                    event.preventDefault()
-                                    modal.open(statsLink)
-                                }
-
-                                return statsLink
-                            })(),
+                            data.isCoach
+                                ? createElement({ tag: "p", text: "Head Coach" })
+                                : createElement({ tag: "p", text: data.positions.join(" / ") }),
                         ],
                     }),
+                    data.isCoach
+                        ? undefined
+                        : createElement({
+                              tag: "div",
+                              children: [
+                                  (() => {
+                                      const statsLink = createElement({ tag: "a", text: "Statistik" })
+
+                                      statsLink.setAttribute("data-modal", "hardbulls-statistics-modal")
+                                      statsLink.setAttribute("data-player", name)
+
+                                      statsLink.onclick = (event) => {
+                                          event.preventDefault()
+                                          modal.open(statsLink)
+                                      }
+
+                                      return statsLink
+                                  })(),
+                              ],
+                          }),
                 ],
             }),
         ],

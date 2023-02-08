@@ -53,7 +53,8 @@ module.exports = {
                         },
                         encodeOptions: {
                             webp: {
-                                lossless: true,
+                                quality: 80,
+                                lossless: false,
                             },
                         }
                     }

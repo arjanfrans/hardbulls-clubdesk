@@ -95,8 +95,8 @@ export const createInlineModal = (
         container.classList.remove("hardbulls-modal-open")
     }
 
-    closeButton.onmousedown = close
-    background.onmousedown = (event) => {
+    closeButton.onclick = close
+    background.onclick = (event) => {
         event.preventDefault()
         close()
     }
