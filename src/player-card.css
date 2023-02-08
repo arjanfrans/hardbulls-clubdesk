@@ -15,7 +15,9 @@ div.hardbulls-player-card {
     text-align: center;
 }
 
-.hardbulls-player-card-content h3, div, p {
+div.hardbulls-player-card-content h3,
+div.hardbulls-player-card-content div,
+div.hardbulls-player-card-content p {
     text-align: center;
 }
 
