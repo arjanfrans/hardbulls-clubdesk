@@ -1,11 +1,13 @@
 import "./index.css"
 import "./modal.css"
 import "./table.css"
+import "./player-card.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 import { createModal } from "./create-modal"
 import { createElement } from "./util/html"
 import { PlayerStatistics } from "./player-statistics"
+import { PlayerCardsContainer } from "./player-card"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -155,6 +157,18 @@ const addPlayerStatistics = () => {
     }
 }
 
+const addPlayerCardPage = () => {
+    const container = document.querySelector(".hardbulls-player-container") as HTMLElement
+
+    if (container) {
+        const playerCards = PlayerCardsContainer()
+
+        if (playerCards) {
+            container.appendChild(playerCards)
+        }
+    }
+}
+
 export const theBulls = () => {
     alwaysShowMenuOnDesktop()
     addNameToHeader()
@@ -165,4 +179,5 @@ export const theBulls = () => {
     addGameTable()
     addNextGame()
     addPlayerStatistics()
+    addPlayerCardPage()
 }

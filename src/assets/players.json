@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Anthony Bennett",
+    "nickname": "AB",
+    "positions": [],
+    "isCoach": true
+  },
+  {
+    "name": "Clayton Carson",
+    "nickname": "Clay",
+    "positions": [
+      "3rd. Base",
+      "2nd. Base"
+    ]
+  },
+  {
+    "name": "Marcel Winder",
+    "nickname": "Speedy",
+    "positions": [
+      "Outfield",
+      "Pitcher"
+    ],
+    "yearOfBirth": 1989
+  },
+  {
+    "name": "Leon Nöbl",
+    "nickname": "Lion",
+    "positions": [
+      "Outfield",
+      "1st. Base"
+    ]
+  },
+  {
+    "name": "Richard Kranabetter",
+    "nickname": "Richy",
+    "positions": [
+      "Outfield"
+    ]
+  },
+  {
+    "name": "Nick Jäger",
+    "positions": [
+      "Outfield"
+    ]
+  },
+  {
+    "name": "Jakob Gruber",
+    "positions": [
+      "Outfield"
+    ]
+  },
+  {
+    "name": "Pascal Campregher",
+    "nickname": "Basc",
+    "positions": [
+      "Pitcher",
+      "1st. Base"
+    ]
+  },
+  {
+    "name": "Patrick Küng",
+    "nickname": "Pat",
+    "positions": [
+      "Outfield"
+    ]
+  },
+  {
+    "name": "Laurin Schedler",
+    "positions": [
+      "2nd. Base"
+    ]
+  },
+  {
+    "name": "Levin Maier",
+    "nickname": "Lele",
+    "positions": [
+      "Pitcher",
+      "2nd. Base"
+    ]
+  },
+  {
+    "name": "Matthias Lutter",
+    "nickname": "Lutti",
+    "positions": [
+      "Outfield",
+      "Catcher"
+    ]
+  },
+  {
+    "name": "Yanik Mäser",
+    "positions": [
+      "2nd. Base",
+      "3nd. Base",
+      "Shortstop"
+    ]
+  },
+  {
+    "name": "Marvin Glassen",
+    "nickname": "Marvo",
+    "positions": [
+      "Outfield"
+    ]
+  },
+  {
+    "name": "Jonas Zimmermann",
+    "nickname": "JZ",
+    "positions": [
+      "Pitcher"
+    ]
+  },
+  {
+    "name": "Erwin Frias",
+    "nickname": "La Máquina",
+    "positions": [
+      "Shortstop"
+    ]
+  },
+  {
+    "name": "Hubert Böhler",
+    "nickname": "Hubi",
+    "positions": [
+      "Catcher",
+      "1st. Base"
+    ]
+  },
+  {
+    "name": "Arjan Frans",
+    "nickname": "Fiets",
+    "positions": [
+      "Outfield"
+    ]
+  }
+]

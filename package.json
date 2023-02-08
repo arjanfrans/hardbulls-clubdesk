@@ -42,6 +42,7 @@
   "dependencies": {},
   "devDependencies": {
     "@tsconfig/next-strictest": "^1.0.1",
+    "@types/webpack-env": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "css-loader": "^6.7.3",

@@ -10,3 +10,16 @@ export interface PlayerMapping {
         }
     }
 }
+
+export interface Player {
+    stats: {
+        [key: string]: {
+            pitching?: {
+                [key: string]: string
+            }
+            batting?: {
+                [key: string]: string
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+div.hardbulls-player-container {
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.hardbulls-player-card {
+    padding: 15px;
+    margin: 15px;
+    box-shadow: var(--light-box-shadow);
+    min-width: 320px;
+}
+
+.hardbulls-player-card-image-container {
+    text-align: center;
+}
+
+.hardbulls-player-card-content h3, div, p {
+    text-align: center;
+}
+

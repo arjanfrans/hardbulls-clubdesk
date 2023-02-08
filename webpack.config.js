@@ -93,4 +93,9 @@ module.exports = {
         library: 'GodSave',
         clean: true,
     },
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    }
 };

@@ -28,7 +28,6 @@ export const createModal = (id: string, onOpen: (modal: Modal, openTrigger: HTML
     const background = createElement({ tag: "div", classList: ["hardbulls-modal-close", "hardbulls-modal-background"] })
 
     const container = createElement({
-        id,
         tag: "div",
         classList: ["hardbulls-modal-container"],
         children: [background, contentContainer],
@@ -58,6 +57,65 @@ export const createModal = (id: string, onOpen: (modal: Modal, openTrigger: HTML
                 })
             }
         })
+    }
+
+    return modal
+}
+
+export interface InlineModal {
+    container: HTMLElement
+    content: HTMLElement
+    open: (openTrigger: HTMLElement) => void
+    close: () => void
+}
+
+export const createInlineModal = (
+    element: HTMLElement,
+    onOpen: (modal: InlineModal, openTrigger: HTMLElement) => void
+): InlineModal => {
+    const closeButton = createElement({
+        tag: "button",
+        classList: ["hardbulls-modal-close-button"],
+        text: "X",
+    })
+
+    const content = createElement({
+        tag: "div",
+        classList: ["hardbulls-modal-content"],
+    })
+    const contentContainer = createElement({
+        tag: "div",
+        classList: ["hardbulls-modal-content-container"],
+        children: [closeButton, content],
+    })
+
+    const background = createElement({ tag: "div", classList: ["hardbulls-modal-background"] })
+
+    const close = () => {
+        container.classList.remove("hardbulls-modal-open")
+    }
+
+    closeButton.onmousedown = close
+    background.onmousedown = (event) => {
+        event.preventDefault()
+        close()
+    }
+
+    const container = createElement({
+        tag: "div",
+        classList: ["hardbulls-modal-container"],
+        children: [background, contentContainer],
+    })
+
+    const modal = {
+        container,
+        content,
+        open: (openTrigger: HTMLElement) => {
+            container.classList.add("hardbulls-modal-open")
+
+            onOpen(modal, openTrigger)
+        },
+        close,
     }
 
     return modal
