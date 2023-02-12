@@ -9,6 +9,9 @@ import imgClayton from "./assets/players/Clayton Carson.png?as=webp&width=220&he
 import imgHubert from "./assets/players/Hubert Böhler.png?as=webp&width=220&height=220"
 
 // @ts-ignore since typescript doesn't support multiple wildcards
+import imgArjan from "./assets/players/Arjan Frans.png?as=webp&width=220&height=220"
+
+// @ts-ignore since typescript doesn't support multiple wildcards
 import imgYanik from "./assets/players/Yanik Mäser.png?as=webp&width=220&height=220"
 
 // @ts-ignore since typescript doesn't support multiple wildcards
@@ -58,6 +61,7 @@ const mapping: { [key: string]: string } = {
     "Marcel Winder": imgMarcel,
     "Jonas Zimmermann": imgJonas,
     "Anthony Bennett": imgAB,
+    "Arjan Frans": imgArjan,
 }
 
 export interface PlayerData {
@@ -66,6 +70,9 @@ export interface PlayerData {
     yearOfBirth?: number | null
     nickname?: string
     isCoach?: boolean
+    throws?: string
+    hits?: string
+    number?: number
 }
 
 const sortPlayers = (a: PlayerData, b: PlayerData) => {
@@ -117,23 +124,46 @@ const playerCard = (name: string, modal: InlineModal) => {
                 children: [
                     createElement({
                         tag: "div",
-                        children: [createElement({ tag: "h3", text: name })],
+                        classList: ["hardbulls-player-card-name"],
+                        text: name,
                     }),
                     createElement({
                         tag: "div",
                         children: [
                             data.isCoach
                                 ? createElement({ tag: "p", text: "Head Coach" })
-                                : createElement({ tag: "p", text: data.positions.join(" / ") }),
+                                : createElement({
+                                      tag: "ul",
+                                      classList: ["unstyled-list"],
+                                      children: data.positions.map((v) => {
+                                          return createElement({ tag: "li", text: v })
+                                      }),
+                                  }),
                         ],
                     }),
+                ],
+            }),
+            createElement({
+                tag: "div",
+                classList: ["hardbulls-player-card-footer"],
+                children: [
                     data.isCoach
                         ? undefined
                         : createElement({
                               tag: "div",
+                              classList: ["hardbulls-player-card-statistics"],
                               children: [
                                   (() => {
-                                      const statsLink = createElement({ tag: "a", text: "Statistik" })
+                                      if (name === "Daniel Hotz") {
+                                          console.log(name)
+                                      }
+                                      const statsLink = createElement({
+                                          tag: "a",
+                                          title: "Statistik",
+                                          children: [
+                                              createElement({ tag: "span", classList: ["fas", "fa-chart-bar"] }),
+                                          ],
+                                      })
 
                                       statsLink.setAttribute("data-modal", "hardbulls-statistics-modal")
                                       statsLink.setAttribute("data-player", name)
@@ -147,6 +177,13 @@ const playerCard = (name: string, modal: InlineModal) => {
                                   })(),
                               ],
                           }),
+                    data.number
+                        ? createElement({
+                              tag: "div",
+                              classList: ["hardbulls-player-card-number"],
+                              text: `#${data.number}`,
+                          })
+                        : undefined,
                 ],
             }),
         ],

@@ -3,6 +3,7 @@
     --heavy-box-shadow: rgb(0 0 0 / 42%) 0px 0.125rem 0.25rem 0px;
     --card-box-shadow: rgb(0 0 0 / 10%) 0px 0.08rem 0.1rem 0px;
     --color-bulls-red: rgba(226, 5, 20, 1.0);
+    --color-bulls-dark-red: rgb(166, 0, 41);
     --color-bulls-light-red: rgba(226, 5, 20, 0.3);
     --color-light-gray: rgba(204, 204, 204, 1.0);
     --color-very-light-gray: rgb(243, 243, 243);
@@ -203,4 +204,11 @@ div.cd-tile-v-main-area {
 .cd-button:hover>.button-arrow::before {
     opacity: 1;
     width: 8px;
+}
+
+ul.unstyled-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
 }

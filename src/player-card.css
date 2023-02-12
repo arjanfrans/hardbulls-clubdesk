@@ -11,13 +11,61 @@ div.hardbulls-player-card {
     min-width: 320px;
 }
 
+
 .hardbulls-player-card-image-container {
     text-align: center;
+}
+
+.hardbulls-player-card-image-container img {
+    filter: grayscale(0.3);
+}
+
+div.hardbulls-player-card-name {
+    text-align: center;
+    color: var(--color-bulls-dark-red);
+    text-shadow: 1px 1px 2px var(--color-very-light-gray);
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+div.hardbulls-player-card-content {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 6em;
 }
 
 div.hardbulls-player-card-content h3,
 div.hardbulls-player-card-content div,
 div.hardbulls-player-card-content p {
     text-align: center;
+}
+
+div.hardbulls-player-card-number {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    font-weight: bolder;
+    font-size: xxx-large;
+    color: var(--color-bulls-dark-red);
+    text-shadow: 1px 1px 2px #000000;
+}
+
+div.hardbulls-player-card-statistics a {
+    color:revert;
+}
+
+div.hardbulls-player-card-statistics {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    font-weight: lighter;
+    color: #AAAAAA;
+    font-size: xx-large;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+div.hardbulls-player-card-footer {
+    position: relative;
+    opacity: 70%;
 }
 

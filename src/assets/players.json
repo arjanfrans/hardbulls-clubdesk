@@ -11,7 +11,10 @@
     "positions": [
       "3rd. Base",
       "2nd. Base"
-    ]
+    ],
+    "number": 11,
+    "hits": "S",
+    "throws": "R"
   },
   {
     "name": "Marcel Winder",
@@ -20,7 +23,10 @@
       "Outfield",
       "Pitcher"
     ],
-    "yearOfBirth": 1989
+    "yearOfBirth": 1989,
+    "number": 24,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Leon Nöbl",
@@ -28,26 +34,55 @@
     "positions": [
       "Outfield",
       "1st. Base"
-    ]
+    ],
+    "number": 9,
+    "hits": "R",
+    "throws": "R"
+  },
+  {
+    "name": "Daniel Hotz",
+    "nickname": "Hotzi",
+    "positions": [
+      "Pitcher"
+    ],
+    "hits": "R",
+    "throws": "R"
+  },
+  {
+    "name": "Gregor Paterno",
+    "nickname": "Gregy",
+    "positions": [
+      "Outfield",
+      "2st. Base"
+    ],
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Richard Kranabetter",
     "nickname": "Richy",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "number": 5,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Nick Jäger",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Jakob Gruber",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Pascal Campregher",
@@ -55,20 +90,28 @@
     "positions": [
       "Pitcher",
       "1st. Base"
-    ]
+    ],
+    "number": 4,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Patrick Küng",
     "nickname": "Pat",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Laurin Schedler",
     "positions": [
       "2nd. Base"
-    ]
+    ],
+    "number": 17,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Levin Maier",
@@ -76,7 +119,10 @@
     "positions": [
       "Pitcher",
       "2nd. Base"
-    ]
+    ],
+    "number": 32,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Matthias Lutter",
@@ -84,7 +130,10 @@
     "positions": [
       "Outfield",
       "Catcher"
-    ]
+    ],
+    "number": 18,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Yanik Mäser",
@@ -92,28 +141,40 @@
       "2nd. Base",
       "3nd. Base",
       "Shortstop"
-    ]
+    ],
+    "number": 3,
+    "hits": "S",
+    "throws": "R"
   },
   {
     "name": "Marvin Glassen",
     "nickname": "Marvo",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "number": 13,
+    "hits": "S",
+    "throws": "R"
   },
   {
     "name": "Jonas Zimmermann",
     "nickname": "JZ",
     "positions": [
       "Pitcher"
-    ]
+    ],
+    "number": 16,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Erwin Frias",
     "nickname": "La Máquina",
     "positions": [
       "Shortstop"
-    ]
+    ],
+    "number": 23,
+    "hits": "S",
+    "throws": "R"
   },
   {
     "name": "Hubert Böhler",
@@ -121,13 +182,19 @@
     "positions": [
       "Catcher",
       "1st. Base"
-    ]
+    ],
+    "number": 19,
+    "hits": "R",
+    "throws": "R"
   },
   {
     "name": "Arjan Frans",
     "nickname": "Fiets",
     "positions": [
       "Outfield"
-    ]
+    ],
+    "number": 21,
+    "hits": "R",
+    "throws": "R"
   }
 ]
