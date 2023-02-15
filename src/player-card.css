@@ -46,8 +46,10 @@ div.hardbulls-player-card-number {
     right: 15px;
     bottom: 0;
     font-weight: bolder;
-    font-size: 48px;
+    font-size: 40px;
     color: var(--color-bulls-red);
+    width: 46px;
+    text-align: center;
 }
 
 div.hardbulls-player-card-statistics a {
@@ -61,6 +63,14 @@ div.hardbulls-player-card-statistics {
     font-weight: lighter;
     color: var(--color-light-gray);
     font-size: 32px;
+}
+
+div.hardbulls-player-card-flag {
+    right: 15px;
+    position: absolute;
+    bottom: 46px;
+    width: 46px;
+    text-align: center;
 }
 
 div.hardbulls-player-card-footer {

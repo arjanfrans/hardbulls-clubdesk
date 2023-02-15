@@ -4,7 +4,8 @@
     "nickname": "AB",
     "positions": [],
     "isCoach": true,
-    "image": "Anthony Bennett.png"
+    "image": "Anthony Bennett.png",
+    "nationality": "us"
   },
   {
     "name": "Clayton Carson",
@@ -16,7 +17,8 @@
     "number": 11,
     "hits": "S",
     "throws": "R",
-    "image": "Clayton Carson.png"
+    "image": "Clayton Carson.png",
+    "nationality": "us"
   },
   {
     "name": "Marcel Winder",
@@ -29,7 +31,8 @@
     "number": 24,
     "hits": "R",
     "throws": "R",
-    "image": "Marcel Winder.png"
+    "image": "Marcel Winder.png",
+    "nationality": "at"
   },
   {
     "name": "Leon Nöbl",
@@ -40,7 +43,8 @@
     ],
     "number": 9,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at"
   },
   {
     "name": "Daniel Hotz",
@@ -49,7 +53,9 @@
       "Pitcher"
     ],
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at",
+    "number": 50
   },
   {
     "name": "Gregor Paterno",
@@ -59,7 +65,9 @@
       "2st. Base"
     ],
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at",
+    "number": 51
   },
   {
     "name": "Richard Kranabetter",
@@ -77,7 +85,9 @@
       "Outfield"
     ],
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at",
+    "number": 52
   },
   {
     "name": "Jakob Gruber",
@@ -85,7 +95,9 @@
       "Outfield"
     ],
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at",
+    "number": 53
   },
   {
     "name": "Pascal Campregher",
@@ -97,7 +109,8 @@
     "number": 4,
     "hits": "R",
     "throws": "R",
-    "image": "Pascal Campregher.png"
+    "image": "Pascal Campregher.png",
+    "nationality": "at"
   },
   {
     "name": "Patrick Küng",
@@ -106,7 +119,9 @@
       "Outfield"
     ],
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "nationality": "at",
+    "number": 54
   },
   {
     "name": "Laurin Schedler",
@@ -116,7 +131,8 @@
     "number": 17,
     "hits": "R",
     "throws": "R",
-    "image": "Laurin Schedler.png"
+    "image": "Laurin Schedler.png",
+    "nationality": "at"
   },
   {
     "name": "Levin Maier",
@@ -128,7 +144,8 @@
     "number": 32,
     "hits": "R",
     "throws": "R",
-    "image": "Levin Maier.png"
+    "image": "Levin Maier.png",
+    "nationality": "at"
   },
   {
     "name": "Matthias Lutter",
@@ -140,7 +157,8 @@
     "number": 18,
     "hits": "R",
     "throws": "R",
-    "image": "Matthias Lutter.png"
+    "image": "Matthias Lutter.png",
+    "nationality": "at"
   },
   {
     "name": "Yanik Mäser",
@@ -152,7 +170,8 @@
     "number": 3,
     "hits": "S",
     "throws": "R",
-    "image": "Yanik Maeser.png"
+    "image": "Yanik Maeser.png",
+    "nationality": "at"
   },
   {
     "name": "Luca Mäser",
@@ -163,7 +182,8 @@
     "number": 29,
     "hits": "R",
     "throws": "R",
-    "image": "Luca Maeser.png"
+    "image": "Luca Maeser.png",
+    "nationality": "at"
   },
   {
     "name": "Marvin Glassen",
@@ -172,9 +192,10 @@
       "Outfield"
     ],
     "number": 13,
-    "hits": "S",
+    "hits": "R",
     "throws": "R",
-    "image": "Marvin Glassen.png"
+    "image": "Marvin Glassen.png",
+    "nationality": "at"
   },
   {
     "name": "Jonas Zimmermann",
@@ -185,7 +206,8 @@
     "number": 16,
     "hits": "R",
     "throws": "R",
-    "image": "Jonas Zimmermann.png"
+    "image": "Jonas Zimmermann.png",
+    "nationality": "at"
   },
   {
     "name": "Erwin Frias",
@@ -196,7 +218,8 @@
     "number": 23,
     "hits": "S",
     "throws": "R",
-    "image": "Erwin Frias.png"
+    "image": "Erwin Frias.png",
+    "nationality": "do"
   },
   {
     "name": "Hubert Böhler",
@@ -208,7 +231,8 @@
     "number": 19,
     "hits": "R",
     "throws": "R",
-    "image": "Huber Boeler.png"
+    "image": "Huber Boeler.png",
+    "nationality": "at"
   },
   {
     "name": "Arjan Frans",
@@ -219,6 +243,7 @@
     "number": 21,
     "hits": "R",
     "throws": "R",
-    "image": "Arjan Frans.png"
+    "image": "Arjan Frans.png",
+    "nationality": "nl"
   }
 ]

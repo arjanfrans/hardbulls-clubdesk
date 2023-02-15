@@ -4,7 +4,7 @@ import { findTeamLogo } from "../find-team-logo"
 import { createMapsLink } from "../create-maps-link"
 import { createElement } from "../util/html"
 
-export const createGameCard = (entry: CsvEntry) => {
+export const createGameCard = (entry: CsvEntry): HTMLElement => {
     const nextGameContainer = document.createElement("div") as HTMLElement
 
     const nextGameDate = parseDate(`${entry["Datum"]} ${entry["Startzeit"]}`)

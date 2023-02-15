@@ -2,9 +2,10 @@ import "./index.css"
 import "./modal.css"
 import "./table.css"
 import "./icons.css"
+import "./flags.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
-import { PlayerCardsContainer } from "./player-card"
+import { PlayerCardsContainer } from "./PlayerCardsContainer"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -132,11 +133,7 @@ const addPlayerCardPage = () => {
     const container = document.querySelector(".hardbulls-player-container") as HTMLElement
 
     if (container) {
-        const playerCards = PlayerCardsContainer()
-
-        if (playerCards) {
-            container.appendChild(playerCards)
-        }
+        container.appendChild(PlayerCardsContainer())
     }
 }
 
