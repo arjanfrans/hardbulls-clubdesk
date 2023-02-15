@@ -3,7 +3,8 @@
     "name": "Anthony Bennett",
     "nickname": "AB",
     "positions": [],
-    "isCoach": true
+    "isCoach": true,
+    "image": "Anthony Bennett.png"
   },
   {
     "name": "Clayton Carson",
@@ -14,7 +15,8 @@
     ],
     "number": 11,
     "hits": "S",
-    "throws": "R"
+    "throws": "R",
+    "image": "Clayton Carson.png"
   },
   {
     "name": "Marcel Winder",
@@ -26,7 +28,8 @@
     "yearOfBirth": 1989,
     "number": 24,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Marcel Winder.png"
   },
   {
     "name": "Leon Nöbl",
@@ -93,7 +96,8 @@
     ],
     "number": 4,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Pascal Campregher.png"
   },
   {
     "name": "Patrick Küng",
@@ -111,7 +115,8 @@
     ],
     "number": 17,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Laurin Schedler.png"
   },
   {
     "name": "Levin Maier",
@@ -122,7 +127,8 @@
     ],
     "number": 32,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Levin Maier.png"
   },
   {
     "name": "Matthias Lutter",
@@ -133,7 +139,8 @@
     ],
     "number": 18,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Matthias Lutter.png"
   },
   {
     "name": "Yanik Mäser",
@@ -144,7 +151,19 @@
     ],
     "number": 3,
     "hits": "S",
-    "throws": "R"
+    "throws": "R",
+    "image": "Yanik Maeser.png"
+  },
+  {
+    "name": "Luca Mäser",
+    "positions": [
+      "Catcher",
+      "Outfield"
+    ],
+    "number": 29,
+    "hits": "R",
+    "throws": "R",
+    "image": "Luca Maeser.png"
   },
   {
     "name": "Marvin Glassen",
@@ -154,7 +173,8 @@
     ],
     "number": 13,
     "hits": "S",
-    "throws": "R"
+    "throws": "R",
+    "image": "Marvin Glassen.png"
   },
   {
     "name": "Jonas Zimmermann",
@@ -164,7 +184,8 @@
     ],
     "number": 16,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Jonas Zimmermann.png"
   },
   {
     "name": "Erwin Frias",
@@ -174,7 +195,8 @@
     ],
     "number": 23,
     "hits": "S",
-    "throws": "R"
+    "throws": "R",
+    "image": "Erwin Frias.png"
   },
   {
     "name": "Hubert Böhler",
@@ -185,7 +207,8 @@
     ],
     "number": 19,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Huber Boeler.png"
   },
   {
     "name": "Arjan Frans",
@@ -195,6 +218,7 @@
     ],
     "number": 21,
     "hits": "R",
-    "throws": "R"
+    "throws": "R",
+    "image": "Arjan Frans.png"
   }
 ]

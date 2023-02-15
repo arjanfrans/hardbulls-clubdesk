@@ -32,6 +32,10 @@ export const link = ({ href, text, children, target, title }: LinkOptions) => {
     return element
 }
 
+export const lineBreak = () => {
+    return createElement({ tag: "br" })
+}
+
 export const createImage = ({ src, title }: ImageOptions) => {
     const element = createElement({ tag: "img", title }) as HTMLImageElement
 

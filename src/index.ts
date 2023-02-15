@@ -1,7 +1,7 @@
 import "./index.css"
 import "./modal.css"
 import "./table.css"
-import "./player-card.css"
+import "./icons.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 import { PlayerCardsContainer } from "./player-card"
