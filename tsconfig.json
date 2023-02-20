@@ -6,6 +6,8 @@
     "noEmit": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "jsx": "react",
+    "jsxFactory": "DOMcreateElement",
   }
 }

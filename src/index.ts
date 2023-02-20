@@ -6,6 +6,7 @@ import "./flags.css"
 import { CardGameTable } from "./game-table/simple-game-table"
 import { NextGame } from "./game-table/next-game"
 import { PlayerCardsContainer } from "./PlayerCardsContainer"
+import { appendElement } from "./util/html"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -133,7 +134,9 @@ const addPlayerCardPage = () => {
     const container = document.querySelector(".hardbulls-player-container") as HTMLElement
 
     if (container) {
-        container.appendChild(PlayerCardsContainer())
+        const element = PlayerCardsContainer()
+
+        appendElement(container, element)
     }
 }
 
