@@ -98,6 +98,17 @@ const moveNewsSubheading = () => {
     }
 }
 
+const optimizeSponsorImages = () => {
+    const format = "_512x512"
+    const sponsorImageTags = document.querySelectorAll("div.cd-sponsors-item .cd-image-content img")
+
+    for (const image of Array.from(sponsorImageTags)) {
+        if (image instanceof HTMLImageElement) {
+            image.src = `${image.src}&imageFormat=${format}`
+        }
+    }
+}
+
 const newsOverviewAuthorSubheading = () => {
     const overviewSubheadings = document.querySelectorAll("div.cd-tile-v-main-subheading") as NodeListOf<HTMLElement>
 
@@ -133,6 +144,7 @@ const addPlayerCardPage = () => {
 }
 
 export const theBulls = () => {
+    optimizeSponsorImages()
     alwaysShowMenuOnDesktop()
     addNameToHeader()
     shuffleSponsors()
