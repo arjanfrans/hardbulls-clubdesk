@@ -38,7 +38,14 @@ function DOMparseNode(element: string, properties: { [key: string]: string }, ch
             if (key.startsWith("on") && key.toLowerCase() in window && typeof value === 'function') {
                 el.addEventListener(key.toLowerCase().substring(2, key.length), value);
             } else if (key === 'className') {
-                el.className = value
+                el.className = value.trim()
+            } else if (key === "style" && typeof value === 'object') {
+                el.setAttribute('style', Object.keys(value).map(cssKey => {
+                    const cssValue = value[cssKey];
+                    const convertedKey = cssKey.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+
+                    return `${convertedKey}: ${cssValue}`;
+                }).join('; '));
             } else {
                 el.setAttribute(key, value);
             }

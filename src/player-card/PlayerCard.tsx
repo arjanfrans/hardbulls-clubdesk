@@ -32,7 +32,7 @@ export const PlayerCard = ({player, modal}: Props): JSX.Element => {
             {player.isCoach ?
                 <CoachCardContent name={name}/> :
                 <PlayerCardContent name={name} positions={player.positions} hits={player.hits} throws={player.throws}/>}
-            {!player.isCoach && <Statistics name={name} modal={modal}/>},
+            {!player.isCoach && <Statistics name={name} modal={modal}/>}
             <div className="hardbulls-player-card-footer">
                 {player.nationality && <CountryFlag code={player.nationality}/>}
                 {player.number && <div className="hardbulls-player-card-number">{player.number}</div> }

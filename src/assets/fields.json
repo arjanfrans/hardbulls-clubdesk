@@ -1,0 +1,44 @@
+[
+  {
+    "teams": ["Hard Bulls"],
+    "venue": "Ballpark am See",
+    "location": "Hard",
+    "image": "ballpark_am_see.jpg"
+  },
+  {
+    "teams": ["Traiskirchen Grasshoppers"],
+    "venue": "Hoppersfield",
+    "location": "Traiskirchen",
+    "image": "hoppersfield.jpg"
+  },
+  {
+    "teams": ["Vienna Metrostars"],
+    "venue": "Ballpark Freudenau",
+    "location": "Vienna",
+    "image": "freudenau.jpg"
+  },
+  {
+    "teams": ["Diving Ducks"],
+    "venue": "Ducksfield",
+    "location": "Wiener Neustadt",
+    "image": "ducksfield.jpg"
+  },
+  {
+    "teams": ["Dornbirn Indians"],
+    "venue": "Sportanlage Rohrbach",
+    "location": "Dornbirn",
+    "image": "rohrbach.png"
+  },
+  {
+    "teams": ["Blue Bats"],
+    "venue": "Batsfield",
+    "location": "Schwechat",
+    "image": "batsfield.png"
+  },
+  {
+    "teams": ["Vienna Wanderers"],
+    "venue": "Ballpark Spenadlwiese",
+    "location": "Wien",
+    "image": "spenadlwiese.jpg"
+  }
+]

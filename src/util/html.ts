@@ -7,43 +7,6 @@ interface ElementOptions {
     title?: string | undefined
 }
 
-interface LinkOptions {
-    href: string
-    text?: string
-    title?: string | undefined
-    children?: HTMLElement[]
-    target?: "_blank" | undefined
-}
-
-interface ImageOptions {
-    src: string
-    title?: string | undefined
-}
-
-export const link = ({ href, text, children, target, title }: LinkOptions) => {
-    const element = createElement({ tag: "a", text, children, title }) as HTMLLinkElement
-
-    element.href = href
-
-    if (target) {
-        element.setAttribute("target", target)
-    }
-
-    return element
-}
-
-export const lineBreak = () => {
-    return createElement({ tag: "br" })
-}
-
-export const createImage = ({ src, title }: ImageOptions) => {
-    const element = createElement({ tag: "img", title }) as HTMLImageElement
-
-    element.src = src
-
-    return element
-}
-
 export const createElement = ({
     tag = "div",
     classList = [],

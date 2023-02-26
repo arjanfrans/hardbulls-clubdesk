@@ -1,0 +1,49 @@
+div.hardbulls-game-card-container {
+    padding: 15px;
+    margin: 15px;
+    box-shadow: var(--light-box-shadow);
+    min-width: 320px;
+    position: relative;
+}
+
+div.hardbulls-game-overview-container {
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.hardbulls-game-card {
+    padding: 15px;
+    margin: 15px;
+    box-shadow: var(--light-box-shadow);
+    min-width: 320px;
+    position: relative;
+}
+
+
+.hardbulls-game-card-header-container {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    filter: drop-shadow(0 3px 3px var(--color-light-gray));
+    margin-bottom: 15px;
+}
+
+div.hardbulls-game-card-name {
+    text-align: center;
+    color: var(--color-bulls-red);
+    text-shadow: 1px 1px 2px var(--color-very-light-gray);
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+div.hardbulls-game-card-content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+div.hardbulls-game-card-content h3,
+div.hardbulls-game-card-content div,
+div.hardbulls-game-card-content p {
+    text-align: center;
+}

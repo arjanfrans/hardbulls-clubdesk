@@ -3,10 +3,10 @@ import "./modal.css"
 import "./table.css"
 import "./icons.css"
 import "./flags.css"
-import { CardGameTable } from "./game-table/simple-game-table"
-import { NextGame } from "./game-table/next-game"
+import { NextGame } from "./game-table/NextGame"
 import { PlayerCardsContainer } from "./PlayerCardsContainer"
 import { appendElement } from "./util/html"
+import { GameCardContainer } from "./game-table/GameCardContainer"
 
 const addNameToHeader = () => {
     const siteNameElement = document.createElement("span")
@@ -109,12 +109,10 @@ const newsOverviewAuthorSubheading = () => {
 }
 
 const addGameTable = () => {
-    const gameTableContainer = document.querySelector(".hardbulls-card-game-table") as HTMLElement
+    const container = document.querySelector(".hardbulls-card-game-table") as HTMLElement
 
-    if (gameTableContainer) {
-        const gameTableElement = CardGameTable()
-
-        gameTableContainer.appendChild(gameTableElement)
+    if (container) {
+        appendElement(container, GameCardContainer())
     }
 }
 
@@ -122,11 +120,7 @@ const addNextGame = () => {
     const container = document.querySelector(".hardbulls-next-game") as HTMLElement
 
     if (container) {
-        const nextGame = NextGame()
-
-        if (nextGame) {
-            container.appendChild(nextGame)
-        }
+        appendElement(container, NextGame())
     }
 }
 
@@ -134,9 +128,7 @@ const addPlayerCardPage = () => {
     const container = document.querySelector(".hardbulls-player-container") as HTMLElement
 
     if (container) {
-        const element = PlayerCardsContainer()
-
-        appendElement(container, element)
+        appendElement(container, PlayerCardsContainer())
     }
 }
 
