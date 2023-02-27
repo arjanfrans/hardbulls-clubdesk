@@ -15,7 +15,7 @@
     "generate-ics": "ts-node -P ./tsconfig.cli.json ./generate-calendar.ts",
     "cs-ts": "eslint src --ext ts,tsx",
     "cs-format": "prettier 'src/**/*.ts' --write --no-semi --tab-width 4 --print-width=120",
-    "cs-css":"stylelint src/**/*.css --fix",
+    "cs-css": "stylelint src/**/*.css --fix",
     "cs": "yarn cs-format && yarn cs-ts && yarn cs-css"
   },
   "stylelint": {
@@ -56,6 +56,7 @@
   "repository": "git@github.com:arjanfrans/hardbulls-clubdesk.git",
   "license": "MIT",
   "dependencies": {
+    "@touch4it/ical-timezones": "^1.9.0",
     "@types/react": "^18.0.28"
   },
   "devDependencies": {
