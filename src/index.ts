@@ -1,4 +1,5 @@
 import "./index.css"
+import "./news-page.css"
 import "./modal.css"
 import "./table.css"
 import "./icons.css"

@@ -9,7 +9,9 @@
     --color-very-light-gray: rgb(243, 243, 243);
     --carousel-item-max-height: 150px;
     --carousel-item-max-width: 150px;
-    --container-width: 1200px
+    --container-width: 1200px;
+    --news-container-width: 820px;
+    --owl-carousel-width: 600px;
 }
 
 .hardbulls-game-card {
@@ -138,7 +140,7 @@ span.bulls-club-name {
     display: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 999px) {
     .cd-navigation-bar-content {
         width: 100%;
     }
@@ -148,7 +150,7 @@ span.bulls-club-name {
     }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 1000px) {
     .cd-megamenu-button {
         display: none;
     }
