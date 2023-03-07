@@ -25,8 +25,8 @@ jobs:
     - name: Build
       run: |
         yarn
-        yarn generate-ics
         yarn build
+        yarn generate-ics
     - name: Setup Pages
       uses: actions/configure-pages@v3
     - name: Upload artifact
